@@ -1,0 +1,44 @@
+<div>
+	You are in: 
+	<ul class="breadcrumb">
+		<li class="active"><a href="#">Users</a></li>
+	</ul>
+</div>
+
+<h1 id="title">
+	List of users
+	
+	<%= link_to "Add new user", {:action => :edit}, {:class => "btn primary"} %>
+</h1>
+<br/>
+
+<% if @records.present? then %>
+<table id="index">
+	<thead>
+		<tr>
+			<th>User</th>
+			<th>Following</th>
+			<th>Followed by</th>
+			<th>Actions</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @records.each do |record| %>
+		<tr>
+			<td><%= record.name %></td>
+			<td><%= record.followings.count %></td>
+			<td><%= record.followed_by.count %></td>
+			<td>
+				<%= link_to "Details", {:action => :show, :id => record.id }, {:class => "btn primary"} %>
+				<%= link_to "Edit", {:action => :edit, :id => record.id }, {:class => "btn secondary"} %>
+				<%= link_to "Delete", {:action => :remove, :id => record.id }, {:class => "btn danger"} %>
+			</td>			
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+<% else %>
+	<div class="alert-message block-message error">
+		<h2>No user found.</h2>
+	</div>
+<% end %>

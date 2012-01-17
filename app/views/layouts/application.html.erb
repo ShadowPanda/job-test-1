@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Job Exercise 1</title>
+
+	<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
+	<%= stylesheet_link_tag "application" %>
+	<%= javascript_include_tag "application" %>
+	<%= csrf_meta_tags %>
+</head>
+<body>
+	<section class="container">
+		<header class="well"><h1>Job Exercise 1</h1></header>
+		
+		<section id="body">
+			<%= yield %>
+		</section>
+		
+		<footer>© 2011 Paolo Insogna</footer>		
+	</section>
+</body>
+</html>

@@ -1,0 +1,65 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+*/
+/* line 10, ../../app/assets/stylesheets/application.scss */
+body {
+  padding-top: 10px;
+}
+
+/* line 14, ../../app/assets/stylesheets/application.scss */
+h1 {
+  margin-bottom: 0;
+}
+/* line 17, ../../app/assets/stylesheets/application.scss */
+h1#title {
+  position: relative;
+}
+/* line 20, ../../app/assets/stylesheets/application.scss */
+h1#title a {
+  display: inline-block;
+  position: relative;
+  top: -5px;
+}
+
+/* line 28, ../../app/assets/stylesheets/application.scss */
+.align-right {
+  text-align: right;
+}
+
+/* line 32, ../../app/assets/stylesheets/application.scss */
+ul.breadcrumb {
+  display: inline-block;
+}
+
+/* line 36, ../../app/assets/stylesheets/application.scss */
+input.error {
+  border-color: #DD0000;
+}
+
+/* line 40, ../../app/assets/stylesheets/application.scss */
+span.error {
+  color: #DD0000;
+}
+
+/* line 44, ../../app/assets/stylesheets/application.scss */
+#loading {
+  width: 300px;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  margin-left: -150px;
+  text-align: center;
+}
+
+/* line 54, ../../app/assets/stylesheets/application.scss */
+table#index td:nth-child(1) {
+  width: 300px;
+}
+
+/* line 60, ../../app/assets/stylesheets/application.scss */
+table.follows th, table.follows td {
+  border: 0;
+}
