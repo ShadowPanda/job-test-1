@@ -1,4 +1,4 @@
-JobExercise1::Application.configure do
+JobTest1::Application.configure do
   config.cache_classes = true
   config.serve_static_assets = true
   config.static_cache_control = "public, max-age=3600"

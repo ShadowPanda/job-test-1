@@ -4,7 +4,7 @@ require 'rails/all'
 
 Bundler.require(*Rails.groups(:assets => %w(development test))) if defined?(Bundler)
 
-module JobExercise1
+module JobTest1
   class Application < Rails::Application
     config.encoding = "utf-8"
     config.filter_parameters += [:password]
