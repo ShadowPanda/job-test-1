@@ -9,6 +9,8 @@ module JobTest1
     config.encoding = "utf-8"
     config.filter_parameters += [:password]
     config.assets.enabled = true
-    config.assets.version = '1.0'
+    config.assets.version = "1.0"
+	  config.sass.line_comments = false
+	  config.sass.style = :compact
   end
 end

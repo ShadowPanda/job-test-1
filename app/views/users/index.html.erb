@@ -8,7 +8,7 @@
 <h1 id="title">
 	List of users
 	
-	<%= link_to "Add new user", {:action => :edit}, {:class => "btn btn-primary"} %>
+	<%= link_to({:action => :edit}, {:class => "btn btn-primary"}) do %><i class="icon-plus icon-white"></i> Add new user<% end %>
 </h1>
 <br/>
 
@@ -29,9 +29,9 @@
 			<td><%= record.followings.count %></td>
 			<td><%= record.followed_by.count %></td>
 			<td>
-				<%= link_to "Details", {:action => :show, :id => record.id }, {:class => "btn btn-primary"} %>
-				<%= link_to "Edit", {:action => :edit, :id => record.id }, {:class => "btn btn-secondary"} %>
-				<%= link_to "Delete", {:action => :remove, :id => record.id }, {:class => "btn btn-danger"} %>
+				<%= link_to({:action => :show, :id => record.id }, {:class => "btn btn-primary"}) do %><i class="icon-screenshot icon-white"></i> Details<% end %>
+				<%= link_to({:action => :edit, :id => record.id }, {:class => "btn btn-secondary"}) do %><i class="icon-edit"></i> Edit<% end %>
+				<%= link_to({:action => :remove, :id => record.id }, {:class => "btn btn-danger"}) do %><i class="icon-remove icon-white"></i> Delete<% end %>
 			</td>			
 		</tr>
 		<% end %>

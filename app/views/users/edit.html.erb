@@ -33,7 +33,7 @@ end
 		</div>
 		
 		<div class="form-actions">
-			<%= f.submit (@editing ? "Update" : "Save"), :class => "btn btn-primary" %>
+			<%= button_tag (@editing ? "Update" : "Save"), :type => :submit, :class => "btn btn-primary" do %><i class="icon-ok icon-white"></i> Save<% end %>
 		</div>
 	<% end %>
 <% else %>

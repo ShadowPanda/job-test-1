@@ -21,7 +21,7 @@
 						<% next if follow.user.id == @record.id %>
 						<tr>
 							<th><%= link_to follow.user.name, {:action => :show, :id => follow.user.id } %></th>
-							<td><%= link_to "Unfollow", {:action => :unfollow, :follow_id => follow.id }, {:class => "btn btn-danger"} %></td>
+							<td><%= link_to({:action => :unfollow, :follow_id => follow.id }, {:class => "btn btn-danger"}) do %><i class="icon-minus-sign icon-white"></i> Unfollow<% end %></td>
 						</tr>
 						<% end %>
 					</tbody>
@@ -42,7 +42,7 @@
 						<% next if user.id == @record.id %>
 						<tr>
 							<th><%= link_to user.name, {:action => :show, :id => user.id } %></th>
-							<td><%= link_to "Follow", {:action => :follow, :owner_id => @record.id, :user_id => user.id }, {:class => "btn btn-primary"} %></td>
+							<td><%= link_to({:action => :follow, :owner_id => @record.id, :user_id => user.id }, {:class => "btn btn-success"}) do %><i class="icon-plus-sign icon-white"></i> Follow<% end %></td>
 						</tr>
 						<% end %>
 					</tbody>

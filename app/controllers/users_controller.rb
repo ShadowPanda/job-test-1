@@ -62,7 +62,7 @@ class UsersController < ApplicationController
 			owner = User.find(params[:owner_id].to_i)
 			user = User.find(params[:user_id].to_i)
 
-			if (request != :json || request.post?) && owner && user then # Create the relation
+			if (request.format != :json || request.post?) && owner && user then # Create the relation
 				created = Follow.create({:owner => owner, :user => user}).valid?				
 			end				
 		rescue ActiveRecord::RecordNotFound => e
@@ -83,7 +83,7 @@ class UsersController < ApplicationController
 		begin
 			followed = Follow.find(params[:follow_id].to_i)
 			
-			if (request != :json || request.post?) && followed then
+			if (request.format != :json || request.post?) && followed then
 				owner_id = followed.owner_id if followed # Get owner id for the redirect
 				followed.delete
 				deleted = true
@@ -92,8 +92,8 @@ class UsersController < ApplicationController
 		end
 		
 		# Back to the details or JSON. No error reporting.
-		if request != :json then
-			redirect_to :action => :show, :id => params[:owner_id].to_i
+		if request.format != :json then
+			redirect_to :action => :show, :id => owner_id.to_i
 		else
 			render :json => {:success => deleted}
 		end

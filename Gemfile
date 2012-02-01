@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
 gem 'rails', '3.1.3'
+gem 'sass-rails'
 gem 'jquery-rails'
 gem 'compass'
 

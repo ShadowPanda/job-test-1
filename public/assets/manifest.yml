@@ -1,3 +1,5 @@
 ---
+twitter-bootstrap/glyphicons-halflings-white.png: twitter-bootstrap/glyphicons-halflings-white.png
+twitter-bootstrap/glyphicons-halflings.png: twitter-bootstrap/glyphicons-halflings.png
 application.js: application.js
 application.css: application.css
