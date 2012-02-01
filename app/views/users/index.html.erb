@@ -8,12 +8,12 @@
 <h1 id="title">
 	List of users
 	
-	<%= link_to "Add new user", {:action => :edit}, {:class => "btn primary"} %>
+	<%= link_to "Add new user", {:action => :edit}, {:class => "btn btn-primary"} %>
 </h1>
 <br/>
 
 <% if @records.present? then %>
-<table id="index">
+<table id="index" class="table table-bordered zebra-striped">
 	<thead>
 		<tr>
 			<th>User</th>
@@ -29,16 +29,16 @@
 			<td><%= record.followings.count %></td>
 			<td><%= record.followed_by.count %></td>
 			<td>
-				<%= link_to "Details", {:action => :show, :id => record.id }, {:class => "btn primary"} %>
-				<%= link_to "Edit", {:action => :edit, :id => record.id }, {:class => "btn secondary"} %>
-				<%= link_to "Delete", {:action => :remove, :id => record.id }, {:class => "btn danger"} %>
+				<%= link_to "Details", {:action => :show, :id => record.id }, {:class => "btn btn-primary"} %>
+				<%= link_to "Edit", {:action => :edit, :id => record.id }, {:class => "btn btn-secondary"} %>
+				<%= link_to "Delete", {:action => :remove, :id => record.id }, {:class => "btn btn-danger"} %>
 			</td>			
 		</tr>
 		<% end %>
 	</tbody>
 </table>
 <% else %>
-	<div class="alert-message block-message error">
+	<div class="alert block-message alert- error">
 		<h2>No user found.</h2>
 	</div>
 <% end %>

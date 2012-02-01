@@ -13,8 +13,8 @@
 if params[:errors].present? then
 	errors = params[:errors].split(",")
 	%>
-	<div class="alert-message block-message error">
-		<h2>Unable to save the user due to following error(s):</h2>
+	<div class="alert alert-block alert-error">
+		<h4>Unable to save the user due to following error(s):</h4>
 		<ul>
 			<% if errors.include?("name") then %><li>The name is required or it is already taken.</li><% end %>
 		</ul>
@@ -32,12 +32,12 @@ end
 			<div class="input"><%= f.text_field :name %></div>
 		</div>
 		
-		<div class="actions">
-			<%= f.submit (@editing ? "Update" : "Save"), :class => "btn primary" %>
+		<div class="form-actions">
+			<%= f.submit (@editing ? "Update" : "Save"), :class => "btn btn-primary" %>
 		</div>
 	<% end %>
 <% else %>
-	<div class="alert-message block-message error">
+	<div class="alert block-message alert- error">
 		<h2>The requested user was not found.</h2>
 	</div>	
 <% end %>

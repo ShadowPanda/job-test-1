@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Job Exercise 1</title>
+	<head>
+		<title>Cowtech Job Test 1</title>
 
-	<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
-	<%= stylesheet_link_tag "application" %>
-	<%= javascript_include_tag "application" %>
-	<%= csrf_meta_tags %>
-</head>
-<body>
-	<section class="container">
-		<header class="well"><h1>Job Exercise 1</h1></header>
-		
-		<section id="body">
-			<%= yield %>
-		</section>
-		
-		<footer>© 2011 Paolo Insogna</footer>		
-	</section>
-</body>
+		<%= stylesheet_link_tag "twitter-bootstrap-2" %>
+		<%= stylesheet_link_tag "application" %>
+		<%= javascript_include_tag "application" %>
+		<%= csrf_meta_tags %>
+	</head>
+	<body>
+		<header class="navbar navbar-static">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="brand" href="#">Cowtech Job Test 1</a>
+					
+					<ul class="nav pull-right">
+						<li><a href="http://github.com/ShogunPanda/job-test1">Fork on GitHub</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+
+		<div class="container">
+			<section id="body">
+				<%= yield %>
+			</section>
+
+			<hr/>
+			
+			<footer>
+				<p>© 2011 and above <a href="http://cowtech.it">Paolo Insogna</a>, released under the <a href="">MIT License</a></p>
+			</footer>						
+		</div>		
+	</body>
 </html>

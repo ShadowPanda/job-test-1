@@ -24,14 +24,13 @@ jQuery(document).ready(function($){
 	
 	$.ajaxSetup({
 		beforeSend: function(jqxhr, settings){
-			$('<div class="alert-message warning" id="loading"><h1>Loading ...</h1></div>').appendTo('body');					
+			$('<div class="alert warning" id="loading"><h1>Loading ...</h1></div>').appendTo('body');					
 		},
 		complete: function(jqxhr, status){
 			$('body').find('#loading').remove();
 		}		
 	});
-	
-	return;
+
 	$('#edit-form').on('submit', function(ev){
 		var field = $('#user_name');
 
@@ -39,7 +38,7 @@ jQuery(document).ready(function($){
 			validation_add(field, 'This field is required.');
 			return false;
 		}else{
-			$('<div class="alert-message warning" id="loading"><h3>Loading ...</h3></div>').appendTo('body');
+			$('<div class="alert warning" id="loading"><h3>Loading ...</h3></div>').appendTo('body');
 			
 			rv = true;
 			

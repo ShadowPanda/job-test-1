@@ -5,46 +5,41 @@
  *= require_self
 */
 /* line 10, ../../app/assets/stylesheets/application.scss */
-body {
-  padding-top: 10px;
-}
-
-/* line 14, ../../app/assets/stylesheets/application.scss */
 h1 {
   margin-bottom: 0;
 }
-/* line 17, ../../app/assets/stylesheets/application.scss */
+/* line 13, ../../app/assets/stylesheets/application.scss */
 h1#title {
   position: relative;
 }
-/* line 20, ../../app/assets/stylesheets/application.scss */
+/* line 16, ../../app/assets/stylesheets/application.scss */
 h1#title a {
   display: inline-block;
   position: relative;
   top: -5px;
 }
 
-/* line 28, ../../app/assets/stylesheets/application.scss */
+/* line 24, ../../app/assets/stylesheets/application.scss */
 .align-right {
   text-align: right;
 }
 
-/* line 32, ../../app/assets/stylesheets/application.scss */
+/* line 28, ../../app/assets/stylesheets/application.scss */
 ul.breadcrumb {
   display: inline-block;
 }
 
-/* line 36, ../../app/assets/stylesheets/application.scss */
+/* line 32, ../../app/assets/stylesheets/application.scss */
 input.error {
   border-color: #DD0000;
 }
 
-/* line 40, ../../app/assets/stylesheets/application.scss */
+/* line 36, ../../app/assets/stylesheets/application.scss */
 span.error {
   color: #DD0000;
 }
 
-/* line 44, ../../app/assets/stylesheets/application.scss */
+/* line 40, ../../app/assets/stylesheets/application.scss */
 #loading {
   width: 300px;
   position: absolute;
@@ -54,12 +49,25 @@ span.error {
   text-align: center;
 }
 
-/* line 54, ../../app/assets/stylesheets/application.scss */
+/* line 50, ../../app/assets/stylesheets/application.scss */
 table#index td:nth-child(1) {
   width: 300px;
 }
 
-/* line 60, ../../app/assets/stylesheets/application.scss */
+/* line 55, ../../app/assets/stylesheets/application.scss */
+table.follows {
+  width: 100%;
+  margin-top: 1em;
+}
+/* line 59, ../../app/assets/stylesheets/application.scss */
 table.follows th, table.follows td {
   border: 0;
+}
+/* line 63, ../../app/assets/stylesheets/application.scss */
+table.follows th {
+  text-align: left;
+}
+/* line 67, ../../app/assets/stylesheets/application.scss */
+table.follows td {
+  text-align: right;
 }

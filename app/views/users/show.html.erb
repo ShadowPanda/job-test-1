@@ -10,7 +10,7 @@
 <br/>
 
 <div class="row">
-	<div class="span5">
+	<div class="span4">
 		<% if @record.followings.present? %>
 			<div class="well">
 				<h4>User IS following:</h4>
@@ -21,17 +21,17 @@
 						<% next if follow.user.id == @record.id %>
 						<tr>
 							<th><%= link_to follow.user.name, {:action => :show, :id => follow.user.id } %></th>
-							<td><%= link_to "Unfollow", {:action => :unfollow, :follow_id => follow.id }, {:class => "btn danger"} %></td>
+							<td><%= link_to "Unfollow", {:action => :unfollow, :follow_id => follow.id }, {:class => "btn btn-danger"} %></td>
 						</tr>
 						<% end %>
 					</tbody>
 				</table>
 			</div>
 		<% else %>
-			<div class="alert-message block-message info"><h4>User is not following anyone.</h4></div>
+			<div class="alert block-message alert- info"><h4>User is not following anyone.</h4></div>
 		<% end %>		
 	</div>
-	<div class="span6">
+	<div class="span4">
 		<% if @record.unfollowings.present? then %>
 			<div class="well">
 				<h4>User IS NOT following:</h4>
@@ -42,17 +42,17 @@
 						<% next if user.id == @record.id %>
 						<tr>
 							<th><%= link_to user.name, {:action => :show, :id => user.id } %></th>
-							<td><%= link_to "Follow", {:action => :follow, :owner_id => @record.id, :user_id => user.id }, {:class => "btn primary"} %></td>
+							<td><%= link_to "Follow", {:action => :follow, :owner_id => @record.id, :user_id => user.id }, {:class => "btn btn-primary"} %></td>
 						</tr>
 						<% end %>
 					</tbody>
 				</table>
 			</div>
 		<% else %>
-			<div class="alert-message block-message info"><h4>User is not following by anyone.</h4></div>
+			<div class="alert block-message alert- info"><h4>User is not following by anyone.</h4></div>
 		<% end %>		
 	</div>
-	<div class="span5">
+	<div class="span4">
 		<% if @record.followed_by.present? %>
 			<div class="well">
 				<h4>User is followed by:</h4>
@@ -69,7 +69,7 @@
 				</table>
 			</div>
 		<% else %>
-			<div class="alert-message block-message info"><h4>User is not followed by anyone.</h4></div>
+			<div class="alert block-message alert- info"><h4>User is not followed by anyone.</h4></div>
 		<% end %>
 	</div>
 </div>
