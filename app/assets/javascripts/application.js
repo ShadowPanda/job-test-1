@@ -1,13 +1,3 @@
-// This is a manifest file that'll be compiled into including all the files listed below.
-// Add new JavaScript/Coffee code in separate files in this directory and they'll automatically
-// be included in the compiled file accessible from http://example.com/assets/application.js
-// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
-// the compiled file.
-//
-//= require jquery
-//= require jquery_ujs
-//= require_tree .
-
 String.prototype.trim = function(){
 	return this.replace(/(^\s+)|(\s+$)/g,'');
 };
@@ -24,10 +14,10 @@ jQuery(document).ready(function($){
 	
 	$.ajaxSetup({
 		beforeSend: function(jqxhr, settings){
-			$('<div class="alert warning" id="loading"><h1>Loading ...</h1></div>').appendTo('body');					
+			$('<div class="alert alert-info" id="loading"><h4>Loading ...</h4></div>').hide().appendTo($('body')).fadeIn('fast');					
 		},
 		complete: function(jqxhr, status){
-			$('body').find('#loading').remove();
+			$('body').find('#loading').fadeOut('fast').remove();				
 		}		
 	});
 
@@ -38,8 +28,6 @@ jQuery(document).ready(function($){
 			validation_add(field, 'This field is required.');
 			return false;
 		}else{
-			$('<div class="alert warning" id="loading"><h3>Loading ...</h3></div>').appendTo('body');
-			
 			rv = true;
 			
 			$.ajax({
