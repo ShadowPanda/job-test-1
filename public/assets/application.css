@@ -1,0 +1,46 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+*/
+h1 {
+  margin-bottom: 0; }
+  h1#title {
+    position: relative; }
+    h1#title a {
+      display: inline-block;
+      position: relative;
+      top: -5px; }
+
+.align-right {
+  text-align: right; }
+
+ul.breadcrumb {
+  display: inline-block; }
+
+input.error {
+  border-color: #DD0000; }
+
+span.error {
+  color: #DD0000; }
+
+#loading {
+  width: 300px;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  margin-left: -150px;
+  text-align: center; }
+
+table#index td:nth-child(1) {
+  width: 300px; }
+
+table.follows {
+  width: 100%;
+  margin-top: 1em; }
+  table.follows th, table.follows td {
+    border: 0; }
+  table.follows th {
+    text-align: left; }
+  table.follows td {
+    text-align: right; }
