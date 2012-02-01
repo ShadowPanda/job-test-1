@@ -3,7 +3,7 @@ gem "rails", "3.1.3"
 gem "sass-rails"
 gem "jquery-rails"
 gem "compass"
-gem "thin"
+gem "unicorn"
 
 group :production, :staging do
   gem "pg"
