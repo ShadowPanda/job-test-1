@@ -1,71 +1,25 @@
-/* line 3, ../../app/assets/stylesheets/application.scss */
-h1 {
-  margin-bottom: 0;
-}
-/* line 6, ../../app/assets/stylesheets/application.scss */
-h1#title {
-  position: relative;
-}
-/* line 9, ../../app/assets/stylesheets/application.scss */
-h1#title a {
-  display: inline-block;
-  position: relative;
-  top: -5px;
-}
+.navbar-inner { border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px; }
 
-/* line 17, ../../app/assets/stylesheets/application.scss */
-.align-right {
-  text-align: right;
-}
+h1 { margin-bottom: 0; }
+h1#title { position: relative; }
+h1#title a { display: inline-block; position: relative; top: -5px; }
 
-/* line 21, ../../app/assets/stylesheets/application.scss */
-ul.breadcrumb {
-  display: inline-block;
-}
+.align-right { text-align: right; }
 
-/* line 25, ../../app/assets/stylesheets/application.scss */
-input.error {
-  border-color: #DD0000;
-}
+ul.breadcrumb { display: inline-block; }
 
-/* line 29, ../../app/assets/stylesheets/application.scss */
-span.error {
-  color: #DD0000;
-}
+input.error { border-color: #DD0000; }
 
-/* line 33, ../../app/assets/stylesheets/application.scss */
-#loading {
-  width: 300px;
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  margin-left: -150px;
-  text-align: center;
-}
+span.error { color: #DD0000; }
 
-/* line 43, ../../app/assets/stylesheets/application.scss */
-table#index td:nth-child(1) {
-  width: auto;
-}
-/* line 47, ../../app/assets/stylesheets/application.scss */
-table#index td:nth-child(4) {
-  width: 280px;
-}
+#loading { width: 300px; position: absolute; top: 20px; left: 50%; margin-left: -150px; text-align: center; }
 
-/* line 52, ../../app/assets/stylesheets/application.scss */
-table.follows {
-  width: 100%;
-  margin-top: 1em;
-}
-/* line 56, ../../app/assets/stylesheets/application.scss */
-table.follows th, table.follows td {
-  border: 0;
-}
-/* line 60, ../../app/assets/stylesheets/application.scss */
-table.follows th {
-  text-align: left;
-}
-/* line 64, ../../app/assets/stylesheets/application.scss */
-table.follows td {
-  text-align: right;
-}
+table#index td:nth-child(1) { width: auto; }
+table#index td:nth-child(4) { width: 280px; }
+
+table.follows { width: 100%; margin-top: 1em; }
+table.follows th, table.follows td { border: 0; }
+table.follows th { text-align: left; }
+table.follows td { text-align: right; }
+
+.forker { display: block; position: absolute; top: 0; right: 0; border: 0; }
